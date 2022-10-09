@@ -382,7 +382,7 @@ header:hover {
   border-radius: 0px 0px 14px 14px;
 }
 
-@media (min-width: 1450px) {
+@media (min-width: 1600px) {
   body {
     background-position: top -241px left 321px, bottom -134px right 338px;
   }
@@ -415,5 +415,93 @@ header:hover {
 @media (max-width: 400px) {
   body {
     background-position: top -250px left -123px, bottom -220px right -255px;
+  }
+}
+
+body,
+.phone,
+.photos-sent img {
+  -webkit-animation: slideInUp1.2s ease-in 1 500ms;
+  animation: slideInUp 2s ease;
+  transition: all ease 2s;
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h1,
+.text-sent {
+  -webkit-animation: slideInRight1.2s ease-in 1 500ms;
+  animation: slideInRight 1s ease;
+  transition: all ease 1.5s;
+  animation-delay: 100ms;
+}
+
+.body,
+.text-box,
+.pricing {
+  -webkit-animation: slideInLeft1.2s ease-in 1 500ms;
+  animation: slideInLeft 2s ease;
+  transition: all ease 1.5s;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

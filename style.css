@@ -60,6 +60,9 @@ button {
   --light-violet: hsla(276, 41%, 93%, 1);
   --phone-bg: hsla(271, 16%, 96%, 1);
   --white: hsla(0, 0%, 100%, 1);
+  --gradient: linear-gradient(225deg, #eb57ff 0%, #8739FF 100%);
+  --gradient-bg: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #9341C8 100%);
+  ;
 }
 
 body {
@@ -71,7 +74,11 @@ body {
   justify-content: center;
   text-rendering: optimizeSpeed;
   font-family: 'Rubik', sans-serif;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #EADDFF 100%);
+  background-color: var(--gradient-bg);
+  background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: top -150px left 107px, bottom -134px right 102px;
+  background-size: contain;
 }
 
 
@@ -348,14 +355,9 @@ header:hover {
 }
 
 
-.decoration-top {
-  position: absolute;
-  display: flex;
-  width: 30%;
-  height: 1018px;
-  background: linear-gradient(225deg, #eb57ff 0%, #8739FF 100%);
-  border-radius: 225px;
-  transform: translate(-100px, -350px);
+.footer {
+  position: relative;
+  max-width: 1110px;
 }
 
 .decoration-bottom {
@@ -364,9 +366,9 @@ header:hover {
   width: 30%;
   height: 1018px;
   background: linear-gradient(225deg, #eb57ff 0%, #8739FF 100%);
-  opacity: 10%;
-  border-radius: 225px;
-  transform: translate(1100px, 80px);
+  opacity: 5%;
+  border-radius: 500px;
+  transform: translate(10px, 10px);
 }
 
 .top-phone {
@@ -380,8 +382,23 @@ header:hover {
   border-radius: 0px 0px 14px 14px;
 }
 
+@media (min-width: 1450px) {
+  body {
+    background-position: top -241px left 321px, bottom -134px right 338px;
+  }
+}
+
+@media (max-width: 940px) {
+  body {
+    background-position: top -150px left -118px, bottom -134px right -149px;
+  }
+}
 
 @media (max-width: 750px) {
+  body {
+    background-position: top -500px left -28px, bottom -400px right -159px;
+  }
+
   main {
     display: grid;
     grid-template-columns: 1fr;
@@ -392,5 +409,11 @@ header:hover {
 
   .heading {
     text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    background-position: top -250px left -123px, bottom -220px right -255px;
   }
 }

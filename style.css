@@ -1,58 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap);
 
 * {
   margin: 0;
   padding: 0;
   text-decoration: 0;
   box-sizing: border-box;
-  transition: all ease 0.2s;
-  list-style-type: none;
+  transition: all ease .2s;
+  list-style-type: none
 }
 
-/* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto
 }
 
-/* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
-  line-height: 0;
+  line-height: 0
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
 button,
-textarea,
-select {
-  font: inherit;
+input,
+select,
+textarea {
+  font: inherit
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
   html:focus-within {
-    scroll-behavior: auto;
+    scroll-behavior: auto
   }
 
   *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
+  ::after,
+  ::before {
+    animation-duration: 0s !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important
   }
 }
 
-/* remove all button styles */
 button {
   all: unset;
-  cursor: pointer;
+  cursor: pointer
 }
 
-/* colors  */
 :root {
   --dark-violet: hsla(271, 36%, 24%, 1);
   --gray: hsla(271, 7%, 64%, 1);
@@ -61,8 +55,7 @@ button {
   --phone-bg: hsla(271, 16%, 96%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --gradient: linear-gradient(225deg, #eb57ff 0%, #8739FF 100%);
-  --gradient-bg: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #9341C8 100%);
-  ;
+  --gradient-bg: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #9341C8 100%)
 }
 
 body {
@@ -73,63 +66,62 @@ body {
   align-items: center;
   justify-content: center;
   text-rendering: optimizeSpeed;
-  font-family: 'Rubik', sans-serif;
+  font-family: Rubik, sans-serif;
   background-color: var(--gradient-bg);
-  background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+  background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
   background-repeat: no-repeat;
   background-position: top -150px left 107px, bottom -134px right 102px;
-  background-size: contain;
+  background-size: contain
 }
 
-
 h1 {
-  font: 500 40px/47px 'Rubik', sans-serif;
-  background: linear-gradient(237.59deg, #E844FF 41.82%, #8739FF 91.74%);
+  font: 500 40px/47px Rubik, sans-serif;
+  background: linear-gradient(237.59deg, #e844ff 41.82%, #8739ff 91.74%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  opacity: 95%;
+  opacity: 95%
 }
 
 .body {
-  font: 400 16px/26px 'Rubik', sans-serif;
+  font: 400 16px/26px Rubik, sans-serif;
   color: var(--dark-violet);
-  opacity: 47%;
+  opacity: 47%
 }
 
 h2 {
-  font: 600 11px/13px 'Rubik', sans-serif;
+  font: 600 11px/13px Rubik, sans-serif;
   color: var(--white);
-  padding-bottom: 2px;
+  padding-bottom: 2px
 }
 
 .text-box {
-  font: 400 8px/11px 'Rubik', sans-serif;
+  font: 400 8px/11px Rubik, sans-serif;
   padding: 6px 8px;
   margin-top: 10px;
   max-width: 128px;
   color: var(--violet);
   opacity: 95%;
   background-color: var(--light-violet);
-  border-radius: 10px 10px 4px 10px;
+  border-radius: 10px 10px 4px 10px
 }
 
 .text-box-white {
-  font: 400 8px/11px 'Rubik', sans-serif;
+  font: 400 8px/11px Rubik, sans-serif;
   padding: 6px 8px;
   margin-top: 10px;
   max-width: 128px;
   color: var(--dark-violet);
   opacity: 95%;
   background-color: var(--white);
-  box-shadow: 1px 3px 11px 2px rgba(52, 13, 88, 0.118);
-  border-radius: 10px 10px 4px 10px;
+  box-shadow: 1px 3px 11px 2px rgba(52, 13, 88, .118);
+  border-radius: 10px 10px 4px 10px
 }
 
 .text-box-footer {
   display: flex;
-  font: 400 8px/11px 'Rubik', sans-serif;
+  font: 400 8px/11px Rubik, sans-serif;
   padding: 6px 8px;
   margin-top: 16px;
   margin-bottom: 20px;
@@ -137,23 +129,23 @@ h2 {
   color: var(--dark-violet);
   opacity: 95%;
   background-color: var(--white);
-  box-shadow: 1px 3px 11px 2px rgba(52, 13, 88, 0.149);
+  box-shadow: 1px 3px 11px 2px rgba(52, 13, 88, .149);
   border-radius: 20px;
   justify-content: space-between;
-  align-items: center;
+  align-items: center
 }
 
 .profile-status {
-  font: 200 8px/9px 'Rubik', sans-serif;
-  color: var(--light-violet);
+  font: 200 8px/9px Rubik, sans-serif;
+  color: var(--light-violet)
 }
 
 .gradient {
-  background: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
+  background: linear-gradient(225deg, #e844ff 0, #8739ff 100%)
 }
 
 .bg {
-  background-color: var(--phone-bg);
+  background-color: var(--phone-bg)
 }
 
 main {
@@ -164,7 +156,7 @@ main {
   gap: 50px;
   align-items: center;
   justify-content: center;
-  justify-items: stretch;
+  justify-items: stretch
 }
 
 .phone {
@@ -175,8 +167,8 @@ main {
   margin: 20px;
   padding: 10px 8px;
   background-color: var(--white);
-  box-shadow: 0px 30px 60px -10px rgb(62 39 83 / 25%);
-  border-radius: 28px;
+  box-shadow: 0 30px 60px -10px rgb(62 39 83 / 25%);
+  border-radius: 28px
 }
 
 .phone-box {
@@ -186,74 +178,73 @@ main {
   padding-inline: 8px;
   transform: translateY(-4px);
   background-color: var(--phone-bg);
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 0 0 20px 20px
 }
 
 .profile-photo img {
   display: flex;
   max-width: 24px;
   border-radius: 50%;
-  border: 1.5px solid white;
+  border: 1.5px solid #fff
 }
 
 .heading {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 450px;
+  max-width: 450px
 }
 
 header {
   display: flex;
   padding-inline: 25px;
-  background: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
-  box-shadow: 0px 8px 13px rgb(62 39 83 / 7%);
+  background: linear-gradient(225deg, #e844ff 0, #8739ff 100%);
+  box-shadow: 0 8px 13px rgb(62 39 83 / 7%);
   border-radius: 20px 20px 6px 6px;
   z-index: 1;
-  transition: all ease 0.3s;
+  transition: all ease .3s
 }
 
-
 header:hover {
-  transition: all ease 0.3s;
-  filter: saturate(1.2);
+  transition: all ease .3s;
+  filter: saturate(1.2)
 }
 
 .flex-header {
   display: flex;
-  gap: 8px;
+  gap: 8px
 }
 
 .profile-info {
   display: flex;
   padding-block: 15px 12px;
   gap: 80px;
-  align-items: center;
+  align-items: center
 }
 
 .photos-sent {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
-  margin-top: 20px;
+  margin-top: 20px
 }
 
 .photos-sent img {
   display: block;
   max-width: 40px;
   border-radius: 10px;
-  filter: drop-shadow(3px 2px 6px rgba(63, 16, 107, 0.22));
+  filter: drop-shadow(3px 2px 6px rgba(63, 16, 107, .22))
 }
 
 .text-sent {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: flex-end
 }
 
 .mt-20 {
-  margin-top: 20px;
+  margin-top: 20px
 }
 
 .pricing {
@@ -264,10 +255,10 @@ header:hover {
   margin-top: 10px;
   max-width: 128px;
   color: var(--white);
-  background: linear-gradient(225deg, #8739FF 0%, #d344ff 100%);
-  box-shadow: 0px 10px 5px -5px rgba(62, 39, 83, 0.045318);
+  background: linear-gradient(225deg, #8739ff 0, #d344ff 100%);
+  box-shadow: 0 10px 5px -5px rgba(62, 39, 83, .045318);
   border-radius: 10px 10px 4px 10px;
-  justify-content: space-between;
+  justify-content: space-between
 }
 
 .pricing input {
@@ -277,7 +268,7 @@ header:hover {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0);
   background-color: rgba(255, 255, 255, 0);
-  border: 1px solid #E472FF;
+  border: 1px solid #e472ff
 }
 
 .pricing input:checked {
@@ -290,7 +281,7 @@ header:hover {
   box-sizing: border-box;
   border: 2.5px solid #680d7c;
   border-radius: 50%;
-  padding: 1px;
+  padding: 1px
 }
 
 .text-box-footer input {
@@ -300,64 +291,63 @@ header:hover {
   padding-left: 16px;
   background: rgba(255, 255, 255, 0);
   background-color: rgba(255, 255, 255, 0);
-  border: 1px solid #e572ff00;
+  border: 1px solid #e572ff00
 }
 
 .flex-price {
   display: flex;
   gap: 8px;
-  align-items: center;
+  align-items: center
 }
 
 .text-pricing {
-  font: 300 8px/11px 'Rubik', sans-serif;
+  font: 300 8px/11px Rubik, sans-serif
 }
 
 .price {
-  font: 600 9px/11px 'Rubik', sans-serif;
+  font: 600 9px/11px Rubik, sans-serif
 }
 
 .flex-price {
   display: flex;
   gap: 8px;
-  align-items: center;
+  align-items: center
 }
 
 .arrow-footer img,
 .text-box,
-.text-box-white,
 .text-box-footer,
+.text-box-white,
 .text-pricing {
-  transition: all ease 0.3s;
+  transition: all ease .3s
 }
 
 .arrow-footer img:hover {
   opacity: 80%;
-  transition: all ease 0.7s;
+  transition: all ease .7s;
   filter: saturate(1.5);
-  transform: rotate(360deg);
+  transform: rotate(360deg)
 }
 
-.text-box:hover,
-.text-box-white:hover,
+.pricing:hover,
 .text-box-footer:hover,
+.text-box-white:hover,
+.text-box:hover,
 .text-pricing:hover,
-.text-sent:hover,
-.pricing:hover {
-  transition: all ease 0.3s;
+.text-sent:hover {
+  transition: all ease .3s;
   opacity: 70%;
-  filter: saturate(1.5);
+  filter: saturate(1.5)
 }
 
 .photos-sent img:hover {
-  transition: all ease 0.3s;
-  filter: saturate(1.5);
+  transition: all ease .3s;
+  filter: saturate(1.5)
 }
-
 
 .footer {
   position: relative;
-  max-width: 1110px;
+  max-width: 1110px
 }
 
 .decoration-bottom {
@@ -365,10 +355,10 @@ header:hover {
   display: flex;
   width: 30%;
   height: 1018px;
-  background: linear-gradient(225deg, #eb57ff 0%, #8739FF 100%);
+  background: linear-gradient(225deg, #eb57ff 0, #8739ff 100%);
   opacity: 5%;
   border-radius: 500px;
-  transform: translate(10px, 10px);
+  transform: translate(10px, 10px)
 }
 
 .top-phone {
@@ -378,25 +368,25 @@ header:hover {
   height: 20px;
   margin: 0 auto;
   max-width: 130px;
-  background-color: #ffffff;
-  border-radius: 0px 0px 14px 14px;
+  background-color: #fff;
+  border-radius: 0 0 14px 14px
 }
 
-@media (min-width: 1600px) {
+@media (min-width:1600px) {
   body {
-    background-position: top -241px left 321px, bottom -134px right 338px;
+    background-position: top -241px left 133px, bottom -134px right 255px;
   }
 }
 
-@media (max-width: 940px) {
+@media (max-width:940px) {
   body {
-    background-position: top -150px left -118px, bottom -134px right -149px;
+    background-position: top -150px left -118px, bottom -134px right -149px
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width:750px) {
   body {
-    background-position: top -500px left -28px, bottom -400px right -159px;
+    background-position: top -500px left -28px, bottom -400px right -159px
   }
 
   main {
@@ -404,104 +394,104 @@ header:hover {
     grid-template-columns: 1fr;
     margin: 60px 20px;
     gap: 50px;
-    justify-items: center;
+    justify-items: center
   }
 
   .heading {
-    text-align: center;
+    text-align: center
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width:400px) {
   body {
-    background-position: top -250px left -123px, bottom -220px right -255px;
+    background-position: top -250px left -123px, bottom -220px right -255px
   }
 }
 
-body,
 .phone,
-.photos-sent img {
-  -webkit-animation: slideInUp1.2s ease-in 1 500ms;
+.photos-sent img,
+body {
+  -webkit-animation: slideInUp1.2s ease-in 1 .5s;
   animation: slideInUp 2s ease;
-  transition: all ease 2s;
+  transition: all ease 2s
 }
 
 @keyframes slideInUp {
   0% {
     transform: translateY(-100px);
-    opacity: 0;
+    opacity: 0
   }
 
   100% {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 1
   }
 }
 
-h1,
-.text-sent {
-  -webkit-animation: slideInRight1.2s ease-in 1 500ms;
+.text-sent,
+h1 {
+  -webkit-animation: slideInRight1.2s ease-in 1 .5s;
   animation: slideInRight 1s ease;
   transition: all ease 1.5s;
-  animation-delay: 100ms;
+  animation-delay: .1s
 }
 
 .body,
-.text-box,
-.pricing {
-  -webkit-animation: slideInLeft1.2s ease-in 1 500ms;
+.pricing,
+.text-box {
+  -webkit-animation: slideInLeft1.2s ease-in 1 .5s;
   animation: slideInLeft 2s ease;
-  transition: all ease 1.5s;
+  transition: all ease 1.5s
 }
 
 @keyframes slideInRight {
   0% {
     transform: translateX(-100px);
-    opacity: 0;
+    opacity: 0
   }
 
   100% {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 1
   }
 }
 
 @keyframes slideInLeft {
   0% {
     transform: translateX(100px);
-    opacity: 0;
+    opacity: 0
   }
 
   100% {
     transform: translateX(0);
-    opacity: 1;
+    opacity: 1
   }
 }
 
 @-webkit-keyframes appear {
   0% {
-    opacity: 0;
+    opacity: 0
   }
 
   40% {
-    opacity: 0;
+    opacity: 0
   }
 
   100% {
-    opacity: 1;
+    opacity: 1
   }
 }
 
 @keyframes appear {
   0% {
-    opacity: 0;
+    opacity: 0
   }
 
   40% {
-    opacity: 0;
+    opacity: 0
   }
 
   100% {
-    opacity: 1;
+    opacity: 1
   }
 }
